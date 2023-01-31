@@ -1,5 +1,4 @@
 import React from "react";
-// import Background from "../img/bg.jpg";
 
 const dataValues = [
   {

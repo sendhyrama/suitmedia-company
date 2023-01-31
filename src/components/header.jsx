@@ -1,9 +1,8 @@
 import React from "react";
 import { useState, useEffect } from "react";
-// import Background from "../img/bg.jpg";
 
-// slide Image
-const slide = ["bg-Background1", "bg-Background2"];
+// slide img buat background
+const slide = ["bg-slide1", "bg-slide2"];
 
 const SlideShowBG = ({ imgs }) => {
   const [index, setIndex] = useState(0);
@@ -35,7 +34,7 @@ const SlideShowBG = ({ imgs }) => {
         <i className="bx text-3xl p-3 text-white hover:text-black absolute -left-full bottom-2/4 translate-x-1/2 translate-y-2/4 bx-chevron-left"></i>
       </button>
       <div
-        className={`w-full h-full bg-cover bg-center bg-Background1 transition-all duration-500 flex items-end justify-center absolute px-20`}
+        className={`w-full h-full bg-cover bg-center bg-slide1 transition-all duration-500 flex items-end justify-center absolute px-20`}
         style={{
           transform: `translateX(${-index * 100}%)`,
         }}>
@@ -49,7 +48,7 @@ const SlideShowBG = ({ imgs }) => {
         </div>
       </div>
       <div
-        className={`w-full h-full bg-cover bg-center bg-Background2 transition-all duration-500 flex items-end justify-center `}
+        className={`w-full h-full bg-cover bg-center bg-slide2 transition-all duration-500 flex items-end justify-center `}
         style={{
           transform: `translateX(${index == 1 ? 0 : 1 * 100}%)`,
         }}>
@@ -81,7 +80,7 @@ const SlideShowBG = ({ imgs }) => {
 };
 
 function Header() {
-  return <SlideShowBG imgs={["bg-Background1", "bg-Background2"]} />;
+  return <SlideShowBG imgs={["bg-slide1", "bg-slide2"]} />;
 }
 
 export default Header;
